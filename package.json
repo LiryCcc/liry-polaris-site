@@ -14,8 +14,11 @@
     "type-check": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
+    "lint:commitlint": "commitlint --edit",
+    "lint:stylelint": "stylelint src/**/*.{less,css,scss} --fix",
     "lint": "run-s lint:*",
-    "format": "prettier --write src/"
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "pinia": "^2.2.6",
@@ -73,10 +76,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "pnpm lint-eslint"
+      "pnpm lint:eslint"
     ],
     "*.{css,less,scss}": [
-      "pnpm lint-stylelint"
+      "pnpm lint:stylelint"
     ],
     "*.{ts,tsx,js,jsx,vue,json,html,yaml,yml,css,less,scss,md}": [
       "prettier --write"
