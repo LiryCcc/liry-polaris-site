@@ -18,7 +18,8 @@ const config: UserConfig = {
         'optimize', // 代码性能优化
         'doc', // 文档构建与修改
         'start', // 开始做某事，比如创建分支等
-        'end' // 结束做某事，比如删除分支等
+        'end', // 结束做某事，比如删除分支等
+        'init'
       ]
     ]
   }

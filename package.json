@@ -16,9 +16,9 @@
     "lint:eslint": "eslint . --fix",
     "lint:commitlint": "commitlint --edit",
     "lint:stylelint": "stylelint src/**/*.{less,css,scss} --fix",
-    "lint": "run-s lint:*",
+    "lint": "pnpm format && pnpm lint:eslint && pnpm lint:oxlint && pnpm lint:stylelint",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky init"
   },
   "dependencies": {
     "pinia": "^2.2.6",
