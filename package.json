@@ -20,7 +20,7 @@
     "lint:stylelint": "stylelint src/**/*.{less,css,scss} --fix",
     "lint": "pnpm format && pnpm lint:eslint && pnpm lint:oxlint && pnpm lint:stylelint",
     "format": "prettier --write .",
-    "prepare": "husky init"
+    "prepare": "husky"
   },
   "dependencies": {
     "pinia": "^2.2.6",
@@ -69,12 +69,6 @@
     "vite-plugin-vue-devtools": "^7.6.5",
     "vitest": "^2.1.5",
     "vue-tsc": "^2.1.10"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
